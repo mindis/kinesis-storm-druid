@@ -1,0 +1,17 @@
+syntax = "proto3";
+package com.nicktate;
+
+import "models/proto/pageview.proto";
+import "models/proto/transaction.proto";
+
+message EventContainer {
+  enum EventType {
+    PAGEVIEW = 0;
+    TRANSACTION = 1;
+  }
+
+  optional EventType type = 1;
+
+  optional Pageview pageview = 2;
+  optional Transaction transaction = 3;
+}

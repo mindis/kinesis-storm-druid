@@ -1,7 +1,0 @@
-syntax = "proto3";
-package com.nicktate;
-
-message BufTest {
-  optional float num = 1;
-  optional bytes payload = 2;
-}

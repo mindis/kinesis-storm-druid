@@ -1,0 +1,7 @@
+syntax = "proto3";
+package com.nicktate;
+
+message Transaction {
+  optional string orderNumber = 1;
+  optional uint64 total = 2;
+}

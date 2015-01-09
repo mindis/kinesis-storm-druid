@@ -1,0 +1,7 @@
+syntax = "proto3";
+package com.nicktate;
+
+message Pageview {
+  optional string url = 1;
+  optional string referrer = 2;
+}
