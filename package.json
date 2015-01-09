@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1.5",
+    "confidence": "^1.0.0",
     "protobuf": "^0.11.0"
   }
 }
