@@ -4,19 +4,21 @@ var fs = require('fs');
 var Schema = require('protobuf').Schema;
 
 // "schema" contains all message types defined in buftest.proto|desc.
-var schema = new Schema(fs.readFileSync('./models/buftest.desc'));
+var eventSchema = new Schema(fs.readFileSync('./models/desc/eventContainer.desc'));
 
 // The "BufTest" message.
-var BufTest = schema['com.nicktate.BufTest'];
+var EventContainer = eventSchema['com.nicktate.EventContainer'];
 
-var ob = { num: 42 };
-ob.payload = new Buffer("Hello World");
+var pageview = {
+  type: 'PAGEVIEW',
+  pageview: {
+    url: 'my url'
+  }
+};
 
-var proto = BufTest.serialize(ob);
+var proto = EventContainer.serialize(pageview);
 console.log('proto.length:', proto.length);
+console.log('serialised:', proto);
 
-var outOb = BufTest.parse(proto);
+var outOb = EventContainer.parse(proto);
 console.log('unserialised:', JSON.stringify(outOb));
-
-var payload = new Buffer(outOb.payload);
-console.log(payload);
