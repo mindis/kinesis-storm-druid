@@ -25,12 +25,23 @@
             <groupId>com.amazonaws</groupId>
             <artifactId>kinesis-storm-spout</artifactId>
             <version>1.1.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.storm</groupId>
+                    <artifactId>storm-core</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.storm</groupId>
             <artifactId>storm-core</artifactId>
             <version>0.9.3</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.0.0-pre</version>
         </dependency>
     </dependencies>
 

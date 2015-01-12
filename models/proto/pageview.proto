@@ -1,6 +1,9 @@
 syntax = "proto3";
 package com.nicktate;
 
+option java_package = "com.nicktate.storm";
+option java_outer_classname = "PageviewProto";
+
 message Pageview {
   optional string url = 1;
   optional string referrer = 2;

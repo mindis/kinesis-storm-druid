@@ -1,6 +1,9 @@
 syntax = "proto3";
 package com.nicktate;
 
+option java_package = "com.nicktate.storm";
+option java_outer_classname = "EventContainerProto";
+
 import "models/proto/pageview.proto";
 import "models/proto/transaction.proto";
 

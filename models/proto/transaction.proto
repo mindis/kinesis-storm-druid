@@ -1,6 +1,9 @@
 syntax = "proto3";
 package com.nicktate;
 
+option java_package = "com.nicktate.storm";
+option java_outer_classname = "TransactionProto";
+
 message Transaction {
   optional string orderNumber = 1;
   optional uint64 total = 2;
