@@ -14,6 +14,7 @@
     <name>Container for all Zoinks related MR jobs</name>
 
     <modules>
+        <module>kinesis-storm-spout</module>
         <module>app</module>
     </modules>
 
@@ -26,6 +27,11 @@
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk</artifactId>
             <version>1.9.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
         </dependency>
     </dependencies>
 

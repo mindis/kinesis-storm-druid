@@ -1,0 +1,3 @@
+[submodule "storm/kinesis-storm-spout"]
+	path = storm/kinesis-storm-spout
+	url = git@github.com:awslabs/kinesis-storm-spout.git
